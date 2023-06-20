@@ -1,0 +1,20 @@
+using System.IO;
+
+class Program
+{
+    static void AppendToFile(string fileName, string line)
+    {
+        using (StreamWriter file = File.AppendText(fileName))
+        {
+            file.WriteLine(line);
+        }
+    }
+
+    static void Main()
+    {
+        string fileName = "example.txt";
+        string line = "This is a new line.";
+
+        AppendToFile(fileName, line);
+    }
+}
