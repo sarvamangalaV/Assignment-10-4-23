@@ -1,0 +1,20 @@
+using System;
+using System.IO;
+
+class Program
+{
+    static void Main()
+    {
+        string fileName = "example.txt";
+        string fileContent = "This is an example file.";
+
+        // Creating a file and writing to it
+        File.WriteAllText(fileName, fileContent);
+
+        // Opening the file and reading its contents
+        string fileContents = File.ReadAllText(fileName);
+
+        Console.WriteLine("File contents:");
+        Console.WriteLine(fileContents);
+    }
+}
